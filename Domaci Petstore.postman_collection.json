@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "0dda28f5-54c9-4e8f-93a8-eba542d8ebfe",
+		"name": "Domaci Petstore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Find Pet By Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl1}}/pet/findByStatus?status=available&status=pending&status=sold",
+					"host": [
+						"{{baseUrl1}}"
+					],
+					"path": [
+						"pet",
+						"findByStatus"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "available"
+						},
+						{
+							"key": "status",
+							"value": "pending"
+						},
+						{
+							"key": "status",
+							"value": "sold"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new pet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"Boni\"\r\n  },\r\n  \"name\": \"doggie\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl1}}/pet",
+					"host": [
+						"{{baseUrl1}}"
+					],
+					"path": [
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Pet By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl1}}/pet/9223372036854775807",
+					"host": [
+						"{{baseUrl1}}"
+					],
+					"path": [
+						"pet",
+						"9223372036854775807"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update an existing pet",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"Nole\"\r\n  },\r\n  \"name\": \"doggie\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl1}}/pet",
+					"host": [
+						"{{baseUrl1}}"
+					],
+					"path": [
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a pet in store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"category\": {\r\n        \"id\": 0,\r\n        \"name\": \"pas\"\r\n    },\r\n    \"name\": \"BONI\",\r\n    \"photoUrls\": [\r\n        \"string\"\r\n    ],\r\n    \"tags\": [\r\n        {\r\n            \"id\": 0,\r\n            \"name\": \"string\"\r\n        }\r\n    ],\r\n    \"status\": \"sold\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl1}}/pet/1",
+					"host": [
+						"{{baseUrl1}}"
+					],
+					"path": [
+						"pet",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
